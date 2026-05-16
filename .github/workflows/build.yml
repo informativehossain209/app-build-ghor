@@ -1,12 +1,9 @@
-name: 📦 Build Ghor Khoroch APK
+name: 📦 Build APK
 
 on:
   push:
     branches: [ main, master ]
   workflow_dispatch:
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build:
