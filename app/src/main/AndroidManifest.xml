@@ -15,7 +15,6 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:hardwareAccelerated="true">
 
-        <!-- Splash Screen is the LAUNCHER -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -27,7 +26,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Main WebView Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="false"

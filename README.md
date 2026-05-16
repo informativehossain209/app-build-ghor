@@ -1,61 +1,61 @@
-# 🏠 Ghor Khoroch — Android APK
+# 📱 মিরন ইলেকট্রনিক্স — Android APK
 
-> **ঘরের খরচ হিসাব করুন সহজে** — বিজ্ঞাপনমুক্ত, সম্পূর্ণ বিনামূল্যে Android APK।
-
-**Developed by: SAKIB HOSSAIN**
-**Web App:** [https://g-happk.vercel.app/](https://g-happk.vercel.app/)
+বিজ্ঞাপনমুক্ত, সম্পূর্ণ বিনামূল্যে Android APK।
 
 ---
 
 ## ⚡ সবচেয়ে সহজ পদ্ধতি — GitHub দিয়ে Auto Build
 
-### ধাপ ১ — GitHub Repository তৈরি করুন
+### ধাপ ১ — URL বসান
 
-1. **github.com** → New Repository → নাম দিন: `ghor-khoroch-android`
-2. **Public** রাখুন (Private হলে Actions কাজ নাও করতে পারে)
+`app/src/main/java/com/miron/electronics/MainActivity.java` ফাইল খুলুন।
 
-### ধাপ ২ — Code Upload করুন
+এই লাইনটি খুঁজুন:
+```java
+private static final String APP_URL = "https://YOUR-APP.vercel.app";
+```
+
+আপনার Vercel URL দিন:
+```java
+private static final String APP_URL = "https://miron-app.vercel.app";
+```
+
+### ধাপ ২ — GitHub Repository তৈরি করুন
+
+1. **github.com** → New Repository → নাম দিন: `miron-android`
+2. **Public** রাখুন (Private হলে Actions কাজ করবে)
+
+### ধাপ ৩ — Code Upload করুন
 
 ```bash
-cd ghor-khoroch-android
+cd miron-android
 git init
 git add .
-git commit -m "Initial commit - Ghor Khoroch APK"
+git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/আপনার-username/ghor-khoroch-android.git
+git remote add origin https://github.com/আপনার-username/miron-android.git
 git push -u origin main
 ```
 
-### ধাপ ৩ — APK Download করুন
+### ধাপ ৪ — APK Download করুন
 
 GitHub push করার **৫-৭ মিনিট** পর:
 
 ```
 আপনার Repository → Actions tab → সবচেয়ে নতুন workflow
-→ "GhorKhoroch-APK" artifact → Download
+→ "MironElectronics-APK" artifact → Download
 ```
+
+অথবা **Releases** section থেকেও পাবেন।
 
 ---
 
 ## 📲 APK Install করুন
 
-1. ZIP extract করুন → `app-release.apk` পাবেন
+1. ZIP extract করুন → `MironElectronics.apk` পাবেন
 2. Phone এ পাঠান (WhatsApp / USB / Google Drive)
 3. Phone Settings → **"Unknown sources"** বা **"Install unknown apps"** চালু করুন
 4. APK তে tap করুন → Install
-
----
-
-## 🎨 Features
-
-- ✅ **Splash Screen** — অ্যাপ খুলতেই সুন্দর Splash Screen দেখাবে
-- ✅ **Developer Credit** — SAKIB HOSSAIN নাম প্রতিবার দেখা যাবে
-- ✅ **Ghor Khoroch Logo** — Custom app icon
-- ✅ কোনো বিজ্ঞাপন নেই
-- ✅ Back button কাজ করে
-- ✅ Full screen (action bar নেই)
-- ✅ File upload support
-- ✅ Image save & WhatsApp share
 
 ---
 
@@ -71,29 +71,30 @@ git push
 
 ---
 
+## ✨ Features
+
+- ✅ কোনো বিজ্ঞাপন নেই
+- ✅ Pull-to-refresh (নিচে টানলে reload)
+- ✅ Back button কাজ করে
+- ✅ Internet না থাকলে বাংলায় message
+- ✅ Retry button
+- ✅ Full screen (action bar নেই)
+
+---
+
 ## 📁 Project Structure
 
 ```
-ghor-khoroch-android/
-├── .github/workflows/build.yml        ← Auto APK builder
+miron-android/
+├── .github/workflows/build.yml  ← Auto APK builder
 ├── app/src/main/
-│   ├── java/com/sakib/ghorkhoroch/
-│   │   ├── SplashActivity.java        ← Splash screen (launcher)
-│   │   └── MainActivity.java          ← WebView (loads web app)
+│   ├── java/com/miron/electronics/
+│   │   └── MainActivity.java    ← 👈 URL এখানে বদলান
 │   ├── res/
-│   │   ├── drawable/splash_background.xml  ← Green gradient background
-│   │   ├── layout/activity_splash.xml      ← Splash UI layout
-│   │   ├── mipmap-*/                  ← App icons (all densities)
-│   │   └── values/strings.xml         ← App name
+│   │   ├── mipmap-*/            ← App icons
+│   │   └── values/strings.xml  ← App name
 │   └── AndroidManifest.xml
 ├── build.gradle
 ├── settings.gradle
 └── gradlew
 ```
-
----
-
-## 👨‍💻 Developer
-
-**SAKIB HOSSAIN**
-Web App: [https://g-happk.vercel.app/](https://g-happk.vercel.app/)
